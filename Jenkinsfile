@@ -7,7 +7,7 @@ pipeline {
 		stage ('test') {
 			sh 'mvn test'
 		}
-		stage ('package) {
+		stage ('package') {
 			sh 'mvn package'
 		}
 		stage ('completion') {
