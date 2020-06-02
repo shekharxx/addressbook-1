@@ -10,7 +10,7 @@ pipeline {
 		stage ('deploy) {
 			sh 'mvn deploy'
 		}
-		stage ('Completion') {
+		stage ('completion') {
 			echo 'Completed'
 		}
 	}
