@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example Build') {
             steps {
-                sh 'mvn -B clean verify'
+                sh '/usr/local/src/apache-maven/bin/mvn -B clean verify'
             }
         }
     }
