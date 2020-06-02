@@ -7,8 +7,8 @@ pipeline {
 		stage ('test') {
 			sh 'mvn test'
 		}
-		stage ('deploy) {
-			sh 'mvn deploy'
+		stage ('package) {
+			sh 'mvn package'
 		}
 		stage ('completion') {
 			echo 'Completed'
