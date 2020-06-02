@@ -1,9 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Example Build') {
+        stage('Compiling') {
             steps {
-                sh '/usr/local/src/apache-maven/bin/mvn -B clean verify'
+                sh '/usr/local/src/apache-maven/bin/mvn compile'
+            }
+        }
+        stage('Testing') {
+            steps {
+                sh '/usr/local/src/apache-maven/bin/mvn test'
+            }
+        }
+        stage('Packagin') {
+            steps {
+                sh '/usr/local/src/apache-maven/bin/mvn package'
+                
             }
         }
     }
